@@ -19,10 +19,27 @@
     
 	// Override point for customization after application launch.
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     LoginViewController *vc = [sb instantiateViewControllerWithIdentifier:@"Main"];
-	self.window.rootViewController = vc;
-	[self.window makeKeyAndVisible];
+    
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:vc];
+
+    NSString *isLoggedIn = [[NSUserDefaults standardUserDefaults] objectForKey:@"isLoggedIn"];
+    
+    if ([isLoggedIn isEqualToString:@"success"]) {
+        SettingsViewController *svc = [[SettingsViewController alloc] init];
+        svc.emailText = [[NSUserDefaults standardUserDefaults] objectForKey:@"email"];
+        
+        [navController presentViewController:svc animated:NO completion:nil];
+
+        self.window.rootViewController = svc;
+        [self.window makeKeyAndVisible];
+    }
+    else {
+        self.window.rootViewController = navController;
+        [self.window makeKeyAndVisible];
+    }
 	return YES;
 }
 

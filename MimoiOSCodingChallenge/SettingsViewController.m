@@ -555,7 +555,13 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
 }
 
 - (void)logout {
-
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"isLoggedIn"];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"email"];
+        
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController *vc = [sb instantiateViewControllerWithIdentifier:@"Main"];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)restoreWithCell:(SettingsTableViewCell *)cell {

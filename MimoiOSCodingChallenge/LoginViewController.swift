@@ -30,8 +30,8 @@ class LoginViewController: UIViewController {
         
         let json: [String: String] =
             
-            ["email": email,
-             "client_id": "PAn11swGbMAVXVDbSCpnITx5Utsxz1co",
+            ["client_id": "PAn11swGbMAVXVDbSCpnITx5Utsxz1co",
+             "email": email,
              "password": password,
              "connection": "Username-Password-Authentication"]
         
@@ -53,11 +53,18 @@ class LoginViewController: UIViewController {
             }
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
             if let responseJSON = responseJSON as? [String: Any] {
+                
+                print(responseJSON)
+                
                 if let error = responseJSON["error"] {
                     print("Signup failed: reason - \(error)")
                 }
                 else{
+                    UserDefaults.standard.set("success", forKey: "isLoggedIn")
+                    UserDefaults.standard.set(email, forKey: "email")
+
                     let svc = SettingsViewController()
+                    svc.emailText = email
                     self.present(svc, animated: true, completion: nil)
                 }
             }
@@ -83,7 +90,8 @@ class LoginViewController: UIViewController {
             ["client_id": "PAn11swGbMAVXVDbSCpnITx5Utsxz1co",
             "username": email,
             "password": password,
-            "connection": "Username-Password-Authentication"]
+            "connection": "Username-Password-Authentication",
+            "scope" : "openid profile email"]
             
             let jsonData = try? JSONSerialization.data(withJSONObject: json)
             
@@ -103,10 +111,16 @@ class LoginViewController: UIViewController {
                 }
                 let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
                 if let responseJSON = responseJSON as? [String: Any] {
+                    
+                    print(responseJSON)
+                    
                     if let error = responseJSON["error"] {
                         print("Login failed: reason - \(error)")
                     }
                     else{
+                        UserDefaults.standard.set("success", forKey: "isLoggedIn")
+                        UserDefaults.standard.set(email, forKey: "email")
+
                         let svc = SettingsViewController()
                         svc.emailText = email;
                         self.present(svc, animated: true, completion: nil)

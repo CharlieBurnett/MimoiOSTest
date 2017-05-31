@@ -6,6 +6,6 @@
 extension SettingsViewController : SettingsTableViewCellDelegate {
 	
 	func switchChangedValue(switcher: UISwitch) {
-		
-	}
+
+    }
 }
