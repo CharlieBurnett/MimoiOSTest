@@ -7,4 +7,6 @@
 
 @interface SettingsViewController : UIViewController
 
+@property (strong, nonatomic) NSString *emailText;
+
 @end

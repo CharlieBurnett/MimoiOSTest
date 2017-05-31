@@ -70,6 +70,7 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
 @property (nonatomic, strong) UIDatePicker *timePicker;
 @property (nonatomic) BOOL didSetConstraints;
 @property BOOL userSubscribed;
+
 @end
 
 @implementation SettingsViewController
@@ -281,7 +282,7 @@ static const CGFloat kSettingsSectionFooterHeight               = 48.0;
         UILabel *emailLabel = [[UILabel alloc] init];
         emailLabel.translatesAutoresizingMaskIntoConstraints = NO;
         emailLabel.font = [UIFont systemFontOfSize:self.emailLabelFontSize];
-        emailLabel.text = @"you@getmimo.com";
+        emailLabel.text = _emailText;
         emailLabel.textColor = [UIColor grayColor];
         [headerView addSubview:emailLabel];
         
