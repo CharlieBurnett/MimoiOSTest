@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Auth0.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Lock.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MimoiOSCodingChallenge.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +27,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0DD606B1EEC54EEB7BBEBF0E13FA261E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3D8E880D476D7249957C1BC7755EAF29</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6445D619F9CCFC28FD31F9EE714E4453</key>
+		<key>6748F1B3FDBCA5C5D3911564DA956C85</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA1721EC6BE587430976495F20A520E6</key>
+		<key>AED0E7792D39E9067B538A928E7889A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
