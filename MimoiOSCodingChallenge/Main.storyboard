@@ -50,6 +50,9 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-bq-u4v">
                                 <rect key="frame" x="16" y="359" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4SV-UZ-9lG"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -72,7 +75,6 @@
                             <constraint firstItem="x2E-ud-a8t" firstAttribute="trailing" secondItem="7hQ-KK-pFx" secondAttribute="trailingMargin" id="FiM-xt-1zd"/>
                             <constraint firstItem="x2E-ud-a8t" firstAttribute="top" secondItem="shh-QP-0V1" secondAttribute="bottom" constant="8" id="W4x-2P-hw8"/>
                             <constraint firstItem="SRr-bq-u4v" firstAttribute="top" secondItem="cDm-Wf-dch" secondAttribute="bottom" constant="8" id="WLV-OK-F4x"/>
-                            <constraint firstItem="zJu-v4-Kdy" firstAttribute="top" secondItem="SRr-bq-u4v" secondAttribute="bottom" constant="278" id="XO0-bQ-vYx"/>
                             <constraint firstItem="SRr-bq-u4v" firstAttribute="trailing" secondItem="7hQ-KK-pFx" secondAttribute="trailingMargin" id="bCR-MB-UZV"/>
                             <constraint firstItem="shh-QP-0V1" firstAttribute="top" secondItem="a6E-Bp-ffT" secondAttribute="bottom" constant="163" id="bDz-1T-p58"/>
                             <constraint firstItem="SRr-bq-u4v" firstAttribute="leading" secondItem="7hQ-KK-pFx" secondAttribute="leadingMargin" id="dcD-d6-NuY"/>
